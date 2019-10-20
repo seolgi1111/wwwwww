@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	html{ animation: hh 0.5s infinite;  }
+	h1{left:550px; font-size: 30pt; color:white;  position:absolute;  margin-top: 150px; animation: l 3s infinite }
+
+
+		.a{position: absolute; margin-top: 300px;}
+		.rain {width: 20px;height: 10px;background-color: black;
+		background: rgb();
+		position: absolute; animation: rr 3s infinite ease-in; left:400px;}
+
+		.l {position: absolute; animation: l 2s infinite ease-in; }
+
+		.rrr {width: 20px;height: 10px;background-color: black;
+		background: rgb();
+		position: absolute; animation: rr 1s infinite ease-in; left:400px;}
+		.rr {width: 20px;height: 10px;background-color: black;
+		background: rgb();
+		position: absolute; animation: rr 3s infinite ease-in; left:10px;}
+		.r {width: 20px;height: 10px;background-color: black;
+		background: rgb();
+		position: absolute; animation: rr 2s infinite ease-in; left:200px;}
+
+		@keyframes rr{ from{ bottom: 800px; opacity: 0 }
+		to{bottom: 0px; opacity: 1} }
+
+		@keyframes ch{ from{ left: 800px;  }
+		to{left: 500px;} }
+
+
+.ch { position:absolute; animation: ch 5s infinite }
+
+
+			@keyframes hh{
+  0%   {background-color: black;}
+  25%  {background-color: #FFD348;}
+  50%  {background-color: #3DEAD1}
+  100% {background-color: #E00760;}
+}
+        .z {margin-top: 350px; position: absolute; }
+
+
+   			@keyframes l{ from{ opacity: 0 }
+		to{opacity: 1} }
+
+	</style>
+</head>
+<body>
+	<h1><< 눌러주세YO !</h1>
+		<div class="rain" id="rrr"></div>	
+		<div class="rrr"><img src="a.gif"></div>
+			<div class="rr"><img src="a.gif"></div>
+<div class="r"><img src="a.gif"></div>
+
+<div class="ch"><img src="chhh.gif" style="width:150px; margin-top: 250px;"> </div>
+
+<div>
+
+<img src="dc.gif" style="width:150px; margin-top: 350px; left: 300px; position: absolute;">
+
+	<img src="b.gif" style="width:250px; margin-top: 350px; position: absolute;"> 
+<img src="d.gif" style="width:150px; margin-top: 350px; left: 450px; position: absolute;">
+<img src="c.gif" style="width:200px; margin-top: 350px; left: 650px; position: absolute;">
+<img src="ee.gif" style="width:200px; margin-top: 250px; left: 100px; position: absolute;">
+<img src="z.gif" style="width:200px;  margin-top:300px; left: 300px; position: absolute;">
+<img src="ee.gif" style="width:200px; margin-top: 250px; left: 500px; position: absolute;">
+
+<img src="e.gif" style="width:450px; margin-top: 350px; left: 130px; position: absolute;">
+<img src="fri.gif" style="width:200px;  margin-top: 100px; left: 300px; position: absolute;">
+<img src="ch.gif" style="width:50px;  margin-top: 300px; left:5px; position: absolute;">
+<img src="chh.gif" style="width:50px;  margin-top: 300px; left: 30px; position: absolute;">
+
+
+
+</div>
+
+<div class="l">
+
+	<img src="l.png" style="width:400px; margin-top: 10px; left: 80px; position: absolute;">
+	<img src="l.png" style="width:400px; margin-top: 10px; left: 400px; position: absolute;">
+	<img src="l.png" style="width:200px; margin-top: 20px; left: 10px; position: absolute;">
+	<img src="l.png" style="width:200px; margin-top: 20px; left: 700px; position: absolute;">
+</div>
+
+	<img src="fri.gif" class="thum" id="b" style="width:200px;  margin-top: 100px; left: 300px; position: absolute;">
+	<audio src="music.mp3" loop id="bs"></audio>
+
+	<script type="text/javascript">
+
+				var bstate = "off";
+		b.onclick = function(){
+			if(bstate == "off"){
+				b.style.opacity = "1";
+				bs.play();
+				bstate = "on";	
+			}else{
+				b.style.opacity = "0.3";
+				bs.pause();
+				bstate = "off";	
+			}
+		}
+
+
+
+		for(var i=0; i<40; i++){
+		var a = rrr.cloneNode(true);
+		a.id = i;
+		a.style.left =Math.random()*1000+ "px";
+		a.style.animationDuration = Math.random() + "s";
+		a.style.height = Math.random()*30+ "px";
+		a.style.animationDelay = 0.3*i + "s";
+		a.style.background = randomColor();
+		a.onmouseover =function(){}
+		a.onclick = function(){
+			alert(this.id);
+		}
+		document.body.appendChild(a);}
+
+		function randomColor(){
+			rr = Math.random() * 255;
+			gg = Math.random() * 255;
+			bb = Math.random() * 255;
+			tt = "rgb(" + rr +"," + gg +","+ bb +")";
+			console.log(tt); 
+			return tt;
+		}
+
+
+  			var bstate = "off";
+		b.onclick = function(){
+			if(bstate == "off"){
+				b.style.opacity = "1";
+				bs.play();
+				bstate = "on";	
+			}else{
+				b.style.opacity = "0.3";
+				bs.pause();
+				bstate = "off";	
+			}
+		}
+
+	</script>
+
+
+
+
+
+</body>
+</html>
